@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Latest Mars News</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Mars get news!</a></p>
+            <div class="row">
+                    <div>
+                        <h3>Headline: {{ marsdb_list[0].headline}}</h3>
+                        <p> <h3>{{ marsdb_list[0].newspara}}</h3></p>
+                    </div>
+                    <div align="center" style="outline:#000 thin solid; display:table-cell; height:50px; width:500px; vertical-align:center">
+                       <h4>Mars weather: {{ marsdb_list[0].marsweather}}</h4>
+                    </div>
+                    <div>
+                        <h3>Featured Mars image: </h3></br></h3><img src={{ marsdb_list[0].marsimageurl}}>    
+                    </div>  
+                    <div>
+                        Mars hemispheres:
+                        <div>
+                            {{marsdb_list[0].marshemiurls[0].title}}: <img src = {{marsdb_list[0].marshemiurls[0].img_url}}>
+                            {{marsdb_list[0].marshemiurls[1].title}}: <img src = {{marsdb_list[0].marshemiurls[1].img_url}}>
+                            {{marsdb_list[0].marshemiurls[2].title}}: <img src = {{marsdb_list[0].marshemiurls[2].img_url}}>
+                            {{marsdb_list[0].marshemiurls[3].title}}: <img src = {{marsdb_list[0].marshemiurls[3].img_url}}>
+                        </div>
+                    </div>
+            </div>              
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
